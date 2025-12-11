@@ -1,0 +1,38 @@
+---
+title: "Valorant Quiz - Jogo Interativo"
+description: "Mini-jogo full-stack 'Adivinhe o Agente' baseado no universo de Valorant, com sistema de autenticação e desafio diário."
+image: "/images/projects/valorant-quiz/valorant-quiz-dashboard.png"
+tags: ["React", "Node.js", "Prisma", "MySQL", "JWT"]
+date: "2024-01-10"
+github: "https://github.com/Velten1/ProjectVLR"
+---
+
+## Sobre o Projeto
+
+Jogo interativo web que desafia jogadores a adivinharem o "Agente do Dia" de Valorant. Combina autenticação segura com mecânica de jogo inspirada no Wordle.
+
+## Funcionalidades
+
+- Sistema de autenticação completo (registro, login, perfil)
+- Mini-jogo diário: adivinhe o agente do Valorant
+- Sistema de dicas progressivas (gênero, função, ano)
+- Troca automática do agente à meia-noite (node-cron)
+- Interface temática com fonte oficial do jogo
+
+## Stack Tecnológica
+
+**Frontend:** React 19, Vite, Tailwind CSS, Axios, React Router  
+**Backend:** Node.js, Express, Prisma, MySQL, JWT, bcrypt, node-cron  
+**Validação:** Joi para inputs, cookie-parser para sessões
+
+## Destaques Técnicos
+
+- Autenticação JWT com cookies HttpOnly
+- Agendamento automático com node-cron
+- Sistema de feedback visual similar ao Wordle
+- Seed database com todos os agentes do Valorant
+- Prisma ORM com migrations
+
+## Aprendizados
+
+Primeiro projeto usando node-cron para tarefas agendadas, implementação de cookies HttpOnly para segurança, e trabalho extensivo com Prisma para modelagem e migrations.
