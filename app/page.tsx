@@ -8,7 +8,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen pt-20">
-      {/* Hero Section */}
       <section className="max-w-6xl mx-auto px-6 py-20 md:py-32">
         <div className="max-w-3xl animate-fade-in">
           <div className="flex items-center gap-2 mb-6">
@@ -49,7 +48,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Projects */}
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="flex items-center gap-3 mb-12">
           <Code2 className="w-6 h-6 text-primary-500" />

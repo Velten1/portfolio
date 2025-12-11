@@ -62,7 +62,6 @@ export default function Contact() {
     <div className="min-h-screen pt-20">
       <section className="max-w-6xl mx-auto px-6 py-20 md:py-32">
         <div className="grid md:grid-cols-2 gap-16">
-          {/* Left Column - Info */}
           <div className="animate-fade-in">
             <h1 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6">
               Vamos Conversar
@@ -106,7 +105,6 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right Column - Form */}
           <div className="animate-slide-up">
             <form
               onSubmit={handleSubmit}
@@ -178,14 +176,12 @@ export default function Contact() {
                 <Send className="w-4 h-4" />
               </button>
 
-              {/* Success Message */}
               {submitStatus === 'success' && (
                 <div className="p-4 bg-green-100 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg text-green-800 dark:text-green-200 text-center animate-fade-in">
                   ✓ Mensagem enviada com sucesso! Responderei em breve.
                 </div>
               )}
 
-              {/* Error Message */}
               {submitStatus === 'error' && (
                 <div className="p-4 bg-red-100 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-red-800 dark:text-red-200 text-center animate-fade-in">
                   ✗ Erro ao enviar mensagem. Tente novamente ou envie um email direto.

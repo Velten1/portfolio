@@ -36,7 +36,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
   const { metadata, content } = project
 
-  // Define imagens para carrossel (você pode adicionar mais imagens aqui)
   const projectImages: Record<string, string[]> = {
     'cintos-fashion': [
       '/images/projects/cintos-fashion/cintos-fashion-home.png',
@@ -65,7 +64,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
   return (
     <div className="min-h-screen pt-20">
-      {/* Header */}
       <section className="max-w-4xl mx-auto px-6 py-12">
         <Link
           href="/projects"
@@ -120,12 +118,10 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
-      {/* Image Carousel */}
       <section className="max-w-6xl mx-auto px-6 mb-16">
         <ImageCarousel images={images} alt={metadata.title} />
       </section>
 
-      {/* Content */}
       <section className="max-w-4xl mx-auto px-6 pb-20">
         <article className="prose prose-slate dark:prose-invert prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-p:text-slate-600 dark:prose-p:text-slate-400 prose-p:leading-relaxed prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-a:no-underline hover:prose-a:underline prose-strong:text-slate-900 dark:prose-strong:text-white prose-code:text-primary-600 dark:prose-code:text-primary-400 prose-code:bg-slate-100 dark:prose-code:bg-slate-800 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:before:content-[''] prose-code:after:content-['']">
           <MDXRemote source={content} />

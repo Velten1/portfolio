@@ -62,13 +62,11 @@ const projects = [
     period: '2024',
     technologies: ['React', 'TypeScript', 'Prisma', 'MySQL'],
   },
-  // Seus projetos já estão na página de projetos, mas aqui é um resumo
 ]
 
 export default function Experience() {
   return (
     <div className="min-h-screen pt-20">
-      {/* Hero */}
       <section className="max-w-6xl mx-auto px-6 py-20 md:py-32">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6">
@@ -80,7 +78,6 @@ export default function Experience() {
         </div>
       </section>
 
-      {/* Experiência Profissional */}
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="flex items-center gap-3 mb-12">
           <Briefcase className="w-8 h-8 text-primary-500" />
@@ -131,7 +128,6 @@ export default function Experience() {
         </div>
       </section>
 
-      {/* Formação Acadêmica */}
       <section className="max-w-6xl mx-auto px-6 py-20 bg-slate-50 dark:bg-slate-900/50">
         <div className="flex items-center gap-3 mb-12">
           <GraduationCap className="w-8 h-8 text-primary-500" />
@@ -181,7 +177,6 @@ export default function Experience() {
         </div>
       </section>
 
-      {/* Skills Técnicas */}
       <section className="max-w-6xl mx-auto px-6 py-20 bg-slate-50 dark:bg-slate-900/50">
         <div className="flex items-center gap-3 mb-12">
           <Wrench className="w-8 h-8 text-primary-500" />
@@ -221,7 +216,6 @@ export default function Experience() {
         </div>
       </section>
 
-      {/* Projetos Desenvolvidos */}
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="flex items-center gap-3 mb-12">
           <Code2 className="w-8 h-8 text-primary-500" />

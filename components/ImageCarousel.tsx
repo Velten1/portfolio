@@ -13,7 +13,6 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  // Fechar modal com ESC
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setIsModalOpen(false)
@@ -45,7 +44,6 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
   return (
     <>
       <div className="relative w-full h-96 md:h-[500px] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 mb-16">
-        {/* Imagem Atual - Clicável */}
         <div
           className="relative w-full h-full cursor-zoom-in"
           onClick={() => setIsModalOpen(true)}
@@ -59,7 +57,6 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
           />
         </div>
 
-      {/* Botão Anterior */}
       {images.length > 1 && (
         <>
           <button
@@ -70,7 +67,6 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
             <ChevronLeft className="w-6 h-6" />
           </button>
 
-          {/* Botão Próximo */}
           <button
             onClick={goToNext}
             className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 hover:bg-black/70 text-white transition-all hover:scale-110"
@@ -79,7 +75,6 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
             <ChevronRight className="w-6 h-6" />
           </button>
 
-          {/* Indicadores */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
             {images.map((_, index) => (
               <button
@@ -95,7 +90,6 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
             ))}
           </div>
 
-          {/* Contador */}
           <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-black/50 text-white text-sm">
             {currentIndex + 1} / {images.length}
           </div>
@@ -103,13 +97,11 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
       )}
       </div>
 
-      {/* Modal de Imagem em Tela Cheia */}
       {isModalOpen && (
         <div
           className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
           onClick={() => setIsModalOpen(false)}
         >
-          {/* Botão Fechar */}
           <button
             onClick={() => setIsModalOpen(false)}
             className="absolute top-4 right-4 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all z-10"
@@ -118,7 +110,6 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
             <X className="w-6 h-6" />
           </button>
 
-          {/* Imagem em Tela Cheia */}
           <div
             className="relative w-full h-full max-w-7xl max-h-[90vh]"
             onClick={(e) => e.stopPropagation()}
@@ -131,7 +122,6 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
               priority
             />
 
-            {/* Navegação no Modal */}
             {images.length > 1 && (
               <>
                 <button
@@ -156,7 +146,6 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
                   <ChevronRight className="w-8 h-8" />
                 </button>
 
-                {/* Contador no Modal */}
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full bg-black/50 text-white text-sm">
                   {currentIndex + 1} / {images.length}
                 </div>
@@ -164,7 +153,6 @@ export default function ImageCarousel({ images, alt }: ImageCarouselProps) {
             )}
           </div>
 
-          {/* Hint para fechar */}
           <div className="absolute top-4 left-1/2 -translate-x-1/2 text-white/60 text-sm">
             Clique fora da imagem ou pressione ESC para fechar
           </div>

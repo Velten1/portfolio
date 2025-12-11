@@ -45,7 +45,6 @@ const technologies = [
 export default function About() {
   return (
     <div className="min-h-screen pt-20">
-      {/* Hero */}
       <section className="max-w-4xl mx-auto px-6 py-20 md:py-32">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6">
@@ -71,7 +70,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Skills */}
       <section className="max-w-6xl mx-auto px-6 py-20 bg-slate-50 dark:bg-slate-900/50">
         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
           O que Eu Faço
@@ -99,7 +97,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Technologies */}
       <section className="max-w-6xl mx-auto px-6 py-20">
         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-12 text-center">
           Tecnologias
