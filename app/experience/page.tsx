@@ -36,7 +36,7 @@ const education = [
   },
   {
     title: 'Banco de Dados para Data Science',
-    institution: 'SENAI',
+    institution: 'SENAI - Serviço Nacional de Aprendizagem Industrial',
     period: '2025',
     description: 'Modelagem e otimização de bancos de dados relacionais e não-relacionais. Criação de pipelines de dados e consultas SQL avançadas para análise. Análise e visualização de dados para suporte a decisões estratégicas.',
     highlights: ['SQL', 'MySQL', 'MongoDB', 'Data Analysis', 'Pipeline de Dados'],

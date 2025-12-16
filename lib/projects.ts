@@ -12,6 +12,7 @@ export interface ProjectMetadata {
   date: string
   github?: string
   demo?: string
+  video?: string
 }
 
 export interface Project {

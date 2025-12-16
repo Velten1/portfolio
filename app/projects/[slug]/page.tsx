@@ -4,6 +4,7 @@ import { ArrowLeft, ExternalLink, Github } from 'lucide-react'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { getAllProjects, getProjectBySlug } from '@/lib/projects'
 import ImageCarousel from '@/components/ImageCarousel'
+import VideoPlayer from '@/components/VideoPlayer'
 
 export async function generateStaticParams() {
   const projects = getAllProjects()
@@ -58,6 +59,10 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       '/images/projects/teccel-website/teccel-project-register.png',
 
     ],
+    'hydra-launcher': [
+      '/images/projects/hydra-launcher/library_import.png',
+      '/images/projects/hydra-launcher/hydra-launcher-home.png',
+    ]
   }
 
   const images = projectImages[params.slug] || [metadata.image]
@@ -121,6 +126,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       <section className="max-w-6xl mx-auto px-6 mb-16">
         <ImageCarousel images={images} alt={metadata.title} />
       </section>
+
+      {metadata.video && (
+        <section className="max-w-6xl mx-auto px-6 mb-16">
+          <VideoPlayer src={metadata.video} title={metadata.title} />
+        </section>
+      )}
 
       <section className="max-w-4xl mx-auto px-6 pb-20">
         <article className="prose prose-slate dark:prose-invert prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-p:text-slate-600 dark:prose-p:text-slate-400 prose-p:leading-relaxed prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-a:no-underline hover:prose-a:underline prose-strong:text-slate-900 dark:prose-strong:text-white prose-code:text-primary-600 dark:prose-code:text-primary-400 prose-code:bg-slate-100 dark:prose-code:bg-slate-800 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:before:content-[''] prose-code:after:content-['']">
