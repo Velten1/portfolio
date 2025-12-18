@@ -41,6 +41,27 @@ const education = [
     description: 'Modelagem e otimização de bancos de dados relacionais e não-relacionais. Criação de pipelines de dados e consultas SQL avançadas para análise. Análise e visualização de dados para suporte a decisões estratégicas.',
     highlights: ['SQL', 'MySQL', 'MongoDB', 'Data Analysis', 'Pipeline de Dados'],
   },
+  {
+    title: 'AWS Certified Cloud Practitioner',
+    institution: 'Udemy',
+    period: '2025',
+    description: 'Curso preparatório para certificação AWS Cloud Practitioner com foco em fundamentos da computação em nuvem e ecossistema AWS. Conteúdo teórico e prático com laboratórios hands-on, estudos de caso e simulados alinhados ao exame oficial. Abordagem de infraestrutura global AWS, principais serviços (EC2, S3, RDS, IAM, ECS), modelos de precificação, segurança, conformidade e integração de serviços escaláveis.',
+    highlights: ['AWS', 'EC2', 'S3', 'RDS', 'IAM', 'ECS', 'Cloud Security', 'CLF-C02'],
+  },
+  {
+    title: 'Implantação de Serviços em Nuvem (AWS Cloud Practitioner)',
+    institution: 'SENAI - Serviço Nacional de Aprendizagem Industrial',
+    period: '2026',
+    description: 'Desenvolvimento de competências em implantação, gerenciamento e monitoramento de serviços em nuvem AWS. Abordagem de conceitos essenciais de computação em nuvem, incluindo modelos IaaS, PaaS e SaaS, configuração de máquinas virtuais, servidores web, armazenamento, redes, segurança e monitoramento. Implementação prática de soluções utilizando serviços AWS como EC2, Lambda, S3, RDS, VPC e CloudWatch.',
+    highlights: ['AWS', 'EC2', 'Lambda', 'S3', 'RDS', 'CloudWatch', 'VPC', 'IaaS', 'PaaS'],
+  },
+  {
+    title: 'Desenvolvedor Frontend',
+    institution: 'SENAI - Serviço Nacional de Aprendizagem Industrial',
+    period: '2026',
+    description: 'Desenvolvimento front-end com ênfase em interfaces web funcionais, responsivas e amigáveis ao usuário. Fundamentos de HTML5, CSS3 e JavaScript, incluindo semântica, Flexbox, manipulação do DOM, eventos e lógica de programação. Exploração de bibliotecas e frameworks, conceitos de UI/UX (tipografia, cores, navegabilidade, prototipação) e desenvolvimento completo de websites desde briefing até publicação.',
+    highlights: ['HTML5', 'CSS3', 'JavaScript', 'UI/UX', 'Flexbox', 'Frameworks'],
+  },
 ]
 
 const projects = [
