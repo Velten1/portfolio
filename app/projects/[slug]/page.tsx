@@ -62,6 +62,11 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     'hydra-launcher': [
       '/images/projects/hydra-launcher/library_import.png',
       '/images/projects/hydra-launcher/hydra-launcher-home.png',
+    ],
+    'learning-engine': [
+      '/images/projects/learning-engine/learning-engine-dashboard.png',
+      '/images/projects/learning-engine/learning-engine-pomodoro.png',
+      '/images/projects/learning-engine/learning-engine-revisoes.png',
     ]
   }
 
@@ -98,7 +103,29 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </div>
 
         <div className="flex flex-wrap gap-4 mb-8">
-          {metadata.github && (
+          {metadata.githubFrontend && (
+            <a
+              href={metadata.githubFrontend}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 dark:bg-slate-700 hover:bg-slate-800 dark:hover:bg-slate-600 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105"
+            >
+              <Github className="w-4 h-4" />
+              Ver Frontend
+            </a>
+          )}
+          {metadata.githubBackend && (
+            <a
+              href={metadata.githubBackend}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 dark:bg-slate-700 hover:bg-slate-800 dark:hover:bg-slate-600 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105"
+            >
+              <Github className="w-4 h-4" />
+              Ver Backend
+            </a>
+          )}
+          {metadata.github && !metadata.githubFrontend && !metadata.githubBackend && (
             <a
               href={metadata.github}
               target="_blank"

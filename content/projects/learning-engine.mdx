@@ -1,0 +1,46 @@
+---
+title: "Learning Engine - Plataforma de Estudos"
+description: "Plataforma moderna para estudos combinando técnica Pomodoro e sistema de revisão espaçada (spaced repetition) para otimizar o aprendizado."
+image: "/images/projects/learning-engine/learning-engine-dashboard.png"
+tags: ["Next.js", "TypeScript", "Node.js", "Express", "Prisma", "MySQL", "JWT", "Tailwind CSS"]
+date: "2025-01-15"
+githubFrontend: "https://github.com/Velten1/learning-engine-frontend"
+githubBackend: "https://github.com/Velten1/learning-engine-backend"
+---
+
+## Sobre o Projeto
+
+Plataforma completa de estudos que combina a técnica Pomodoro com sistema de revisão espaçada (spaced repetition), inspirado no AnkiApp. Desenvolvida para otimizar o aprendizado através de sessões focadas e revisões inteligentes de conteúdo.
+
+## Funcionalidades
+
+- Timer Pomodoro com sessões configuráveis (20min estudos)
+- Sistema de revisão espaçada para cards/flashcards
+- Criação e gerenciamento de decks de estudo
+- Histórico completo de sessões Pomodoro
+- Sistema de reflexões pós-sessão
+- Autenticação JWT com renovação automática
+- Dashboard com estatísticas de produtividade
+- Interface responsiva com dark/light mode
+
+## Stack Tecnológica
+
+**Frontend:** Next.js 14 (App Router), TypeScript, Tailwind CSS, React Context API  
+**Backend:** Node.js, Express, TypeScript, Prisma ORM, MySQL  
+**Autenticação:** JWT com cookies HttpOnly, renovação automática de tokens  
+**Arquitetura:** API RESTful, Service Layer pattern, separação de responsabilidades  
+**Estrutura:** Polyrepo (repositórios separados para frontend e backend)
+
+## Destaques Técnicos
+
+- Arquitetura em camadas: API → Service → Component
+- Context API para gerenciamento de estado global (tema, autenticação)
+- Sistema de revisão espaçada com algoritmo de intervalo crescente
+- Renovação automática de tokens JWT via componente dedicado
+- Componentes reutilizáveis seguindo padrões de design
+- TypeScript em todo o stack para type safety
+
+## Aprendizados
+
+Implementação completa de sistema de revisão espaçada, integração de timer Pomodoro com tracking de produtividade, e arquitetura escalável com separação clara de responsabilidades entre frontend e backend.
+

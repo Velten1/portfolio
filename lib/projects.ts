@@ -11,6 +11,8 @@ export interface ProjectMetadata {
   tags: string[]
   date: string
   github?: string
+  githubFrontend?: string
+  githubBackend?: string
   demo?: string
   video?: string
 }
