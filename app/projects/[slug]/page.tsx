@@ -64,9 +64,11 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       '/images/projects/hydra-launcher/hydra-launcher-home.png',
     ],
     'learning-engine': [
-      '/images/projects/learning-engine/learning-engine-dashboard.png',
-      '/images/projects/learning-engine/learning-engine-pomodoro.png',
-      '/images/projects/learning-engine/learning-engine-revisoes.png',
+      '/images/projects/learning-engine/pomodoroHome.png',
+      '/images/projects/learning-engine/loginScreen.png',
+      '/images/projects/learning-engine/historyPages.png',
+      '/images/projects/learning-engine/revisionPage.png',
+      '/images/projects/learning-engine/revisionPage2.png',
     ]
   }
 
