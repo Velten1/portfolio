@@ -1,12 +1,41 @@
 import { Briefcase, GraduationCap, Code2, Calendar, Wrench } from 'lucide-react'
+import Link from 'next/link'
+
+const renderDescriptionWithLinks = (description: string) => {
+  const parts = description.split(/(ticketme\.app)/g)
+  return parts.map((part, index) => {
+    if (part === 'ticketme.app') {
+      return (
+        <a
+          key={index}
+          href="https://ticketme.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 underline"
+        >
+          {part}
+        </a>
+      )
+    }
+    return part
+  })
+}
 
 const experiences = [
+  {
+    type: 'work',
+    title: 'Junior Fullstack Developer',
+    company: 'Voy Tecnologia',
+    period: 'Nov 2025 - Presente',
+    description: 'Desenvolvimento full-stack na plataforma ticketme.app, sistema de alta escala para venda de ingressos e gestão de eventos. Projeto e implementação de feature completa de pagamento de estacionamento com fluxos pré-pago e pós-pago, incluindo integração de APIs de pagamento, gerenciamento de transações em tempo real e otimização de experiência do usuário. Trabalho em arquitetura Vue.js escalável com padrões de código, testes e documentação técnica. Colaboração em equipe ágil para entrega de funcionalidades críticas do negócio.',
+    technologies: ['Vue.js', 'JavaScript', 'REST API', 'JWT', 'Node.js', 'Express.js', 'Prisma', 'MySQL', 'Stripe', 'Vuetify'],
+  },
   {
     type: 'work',
     title: 'Engenheiro de Software',
     company: 'Produtores do Futuro',
     period: 'Nov 2025 - Presente',
-    description: 'Plataforma web para criação, produção e gestão de eventos. Fiz uma API RESTful com autenticação JWT, controle de acesso por roles e integração com Stripe para assinaturas. Inclui gestão de eventos, locais, participantes, custos, receitas (projetadas vs. reais), gestão de bebidas/bar, atividades/tarefas e relatórios financeiros. Analytics com insights e sugestões de preços, dashboard com métricas em tempo real e análise de risco financeiro. Painel administrativo com analytics de acesso, gerenciamento de usuários e planos. Upload de arquivos via Firebase Storage, proteção com reCAPTCHA e sistema de planos com limites mensais. Interface responsiva com Vue.js e Vuetify. Backend em Node.js/Express com Prisma ORM e MySQL.',
+    description: 'Plataforma web completa para gestão de eventos com API RESTful, autenticação JWT, controle de acesso por roles e integração Stripe. Desenvolvimento de sistema de gestão financeira (custos, receitas projetadas vs. reais), analytics com insights e dashboard em tempo real. Painel administrativo com gerenciamento de usuários, planos e upload de arquivos via Firebase. Interface responsiva com Vue.js/Vuetify e backend Node.js/Express com Prisma e MySQL.',
     technologies: ['Vue.js', 'JavaScript', 'MySQL', 'REST API', 'JWT', 'Node.js', 'Express.js', 'Prisma', 'Vuetify', 'Stripe', 'Firebase', 'Vite', 'Pinia',],
   },
   {
@@ -25,7 +54,14 @@ const education = [
     institution: 'Anhanguera Educacional S.A',
     period: '2024 - Presente',
     description: 'Participação em projetos usando Scrum, Kanban e metodologias ágeis. Desenvolvimento de algoritmos eficientes e resolução de problemas computacionais. Gestão de requisitos: levantar, documentar e priorizar requisitos com stakeholders.',
-    highlights: ['Scrum', 'Kanban', 'Algoritmos', 'Gestão de Requisitos', 'UI/UX'],
+    highlights: ['Scrum', 'Kanban', 'Algoritmos', 'Gestão de Requisitos', 'UI/UX', 'Backend', 'Frontend', 'Full Stack', 'Node.js', 'Express.js', 'Prisma', 'MySQL', 'PostgreSQL', 'MongoDB', 'JWT', 'REST API', 'GraphQL', 'Docker', 'Git'],
+  },
+  {
+    title: 'Inteligência Artificial',
+    institution: 'FIAP',
+    period: '2026 - Presente',
+    description: 'Desenvolvimento de algoritmos de IA com foco em aprendizado de máquina e redes neurais. Implementação de modelos de IA para soluções de problemas reais.',
+    highlights: ['IA', 'Machine Learning', 'Redes Neurais', 'Python', 'TensorFlow', 'Keras', 'LLMs', 'Deep Learning', 'RAG'],
   },
   {
     title: 'Desenvolvimento em JavaScript',
@@ -130,7 +166,7 @@ export default function Experience() {
               </div>
 
               <p className="text-slate-600 dark:text-slate-400 mb-4">
-                {exp.description}
+                {renderDescriptionWithLinks(exp.description)}
               </p>
 
               <div className="flex flex-wrap gap-2">
