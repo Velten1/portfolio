@@ -1,5 +1,4 @@
 import { Briefcase, GraduationCap, Code2, Calendar, Wrench } from 'lucide-react'
-import Link from 'next/link'
 
 const renderDescriptionWithLinks = (description: string) => {
   const parts = description.split(/(ticketme\.app)/g)
