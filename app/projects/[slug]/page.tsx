@@ -69,7 +69,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       '/images/projects/learning-engine/historyPages.png',
       '/images/projects/learning-engine/revisionPage.png',
       '/images/projects/learning-engine/revisionPage2.png',
-    ]
+    ],
+    'senai-grade-horarios': [
+      '/images/projects/senai-timegrid/senai-dashboard.png',
+      '/images/projects/senai-timegrid/senai-screen.png',
+      '/images/projects/senai-timegrid/senai-screen2.png',
+    ],
   }
 
   const images = projectImages[params.slug] || [metadata.image]

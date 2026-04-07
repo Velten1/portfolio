@@ -1,0 +1,51 @@
+---
+title: "SENAI Anchieta (Vila Mariana) Grade de Horários"
+description: "Totem digital interativo que consome planilhas (Excel/Google Sheets exportadas em .xlsx), faz múltiplos parses e popula o frontend com aulas, turmas, professores e salas."
+image: "/images/projects/senai-timegrid/senai-dashboard.png"
+tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "SheetJS (xlsx)", "Google Sheets", "Excel", "Totem"]
+date: "2026-04-01"
+---
+
+## Sobre o Projeto
+
+Projeto que eu concluí recentemente para o **SENAI Anchieta (Vila Mariana)**. A proposta é funcionar como um **totem digital**: o usuário escolhe a modalidade/curso e o sistema mostra a **grade de horários**, **aulas**, **professores** e **salas**, de forma rápida e bem visual.
+
+O ponto central do projeto é que **o frontend consome diretamente planilhas** (Excel/Google Sheets exportadas em `.xlsx`) e faz **diversos parses específicos por planilha/aba**, transformando células “soltas” em dados tipados e prontos para renderização.
+
+## Visão geral do fluxo
+
+- **Fonte**: Google Sheets exportado como `.xlsx`
+- **Atualização**: polling (fetch periódico)
+- **Performance**: cache por hash (evita reprocessar quando nada mudou)
+- **Parsing**: parsers especializados por tipo de planilha (técnicos, livres/FIC, superior/MBA/POS, avisos)
+- **Adapter**: normaliza para tipos da aplicação (curso/turma, aula, professor, sala)
+- **UI**: páginas de modalidade + componentes de grade, cards, modais e calendário
+
+## O que o sistema exibe
+
+- **Cursos Técnicos (CAI/Técnicos)**: turmas, disciplinas, professores, salas e horários (manhã/tarde)
+- **Cursos Livres / FIC**: cursos e horários (com forte presença de sábado)
+- **Superior / MBA / Pós**: leitura por abas com prefixos e layouts específicos
+- **Avisos / Eventos**: comunicados na home (feriados, inscrições, etc.)
+
+## Stack Tecnológica
+
+**Frontend:** React 18, TypeScript, Vite, Tailwind CSS, React Router  
+**Parsing de planilhas:** SheetJS (`xlsx`)  
+**UX Totem:** auto-retorno para home após inatividade, interface focada em toque/consulta rápida
+
+## Destaques Técnicos
+
+- **Parsing resiliente de `.xlsx`** (incluindo tratamento de células mescladas)
+- **Parsers por modalidade** para lidar com formatos reais (variações de cabeçalho e layout)
+- **Normalização com adapter** para deduplicar e relacionar entidades (turma/curso, aula, professor, sala)
+- **Atualização contínua** com cache por conteúdo (hash) para reduzir custo de CPU e rede
+
+## Aprendizados
+
+Esse projeto consolidou bastante minha experiência com **engenharia de dados no frontend**: pegar uma fonte não “API-first” (planilhas) e transformar em um modelo consistente, tipado e fácil de consumir pela UI — mantendo desempenho e previsibilidade para um ambiente de totens.
+
+## Observação
+
+Projeto interno do SENAI (Anchieta / Vila Mariana). Uso restrito.
+
