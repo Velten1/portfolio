@@ -16,17 +16,16 @@ export default function KineticHero() {
 
     if (!reduced) {
       animate(element.querySelectorAll('.kinetic-word > span'), {
-        translateY: ['110%', '0%'],
-        rotate: [2, 0],
-        duration: 1100,
-        delay: stagger(90, { start: 650 }),
+        translateY: ['105%', '0%'],
+        duration: 900,
+        delay: stagger(90, { start: 2520 }),
         ease: 'outExpo',
       })
       animate(element.querySelectorAll('.hero-reveal'), {
         opacity: [0, 1],
         translateY: [18, 0],
         duration: 700,
-        delay: stagger(75, { start: 880 }),
+        delay: stagger(75, { start: 2740 }),
         ease: 'outCubic',
       })
       animate(element.querySelectorAll('.hero-cursor-shape'), {
@@ -34,7 +33,7 @@ export default function KineticHero() {
         scale: [.65, 1],
         rotate: [-7, 0],
         duration: 900,
-        delay: 760,
+        delay: 2610,
         ease: 'outExpo',
       })
     }
@@ -43,7 +42,17 @@ export default function KineticHero() {
 
   return (
     <section ref={hero} className="kinetic-hero">
-      <div className="hero-intro-curtain" aria-hidden="true"><span>CAIO VELTEN</span><i>PORTFOLIO / 2026</i></div>
+      <div className="hero-intro-sequence" aria-hidden="true">
+        <div className="intro-role-lockup">
+          <span className="intro-role-software">software</span>
+          <span className="intro-role-engineer">engineer</span>
+        </div>
+        <div className="intro-name-lockup">
+          <span className="intro-name-piece intro-name-first">caio</span>
+          <span className="intro-name-piece intro-name-last">velten</span>
+        </div>
+        <div className="intro-page-wipe" />
+      </div>
       <div className="hero-rule hero-rule-top hero-reveal"><span>Software engineer</span></div>
 
       <div className="name-composition" aria-label="Caio Velten, Software Engineer">

@@ -1,0 +1,52 @@
+---
+title: "AgroGuard"
+description: "Gêmeo digital por equipamento agrícola, criado na FIAP para o Challenge Sompo no Next 2026. O sistema aprende o padrão de cada máquina e transforma telemetria em alertas preventivos explicáveis."
+image: "/images/projects/agroguard/agroguard-landing.jpg"
+tags: ["FIAP Next 2026", "Gêmeo digital", "Machine Learning", "XAI", "IoT"]
+date: "2026-07-20"
+demo: "https://agroguard-omega.vercel.app/"
+---
+
+## Challenge Sompo Seguros com a FIAP
+
+O AgroGuard é um projeto de Inteligência Artificial desenvolvido para o Challenge Sompo Seguros da FIAP Next 2026. A proposta responde ao desafio de identificar fatores ambientais e operacionais que aumentam o risco de dano ou perda de equipamentos agrícolas.
+
+Em vez de reagir somente depois de um sinistro, a solução torna o risco visível antes que o dano aconteça. Cada máquina recebe um gêmeo digital que acompanha seu estado, aprende seu padrão individual de operação e produz um score de risco compreensível.
+
+## Visão da frota
+
+A visão geral apresenta os equipamentos monitorados, o score atual e o componente crítico de cada máquina. Operadores e gestores conseguem identificar rapidamente quais ativos estão normais, em atenção ou em estado crítico.
+
+## Monitoramento preditivo
+
+O painel acompanha temperatura, RPM, vibração, consumo de combustível, pressão de óleo e regime de operação. Esses sinais podem ser combinados com clima, solo, localização e histórico operacional para formar uma visão contextual do risco.
+
+## Gêmeo digital
+
+Cada equipamento possui uma representação visual que conecta componentes físicos aos seus indicadores. A proposta não utiliza um modelo genérico para toda a frota. O gêmeo aprende o comportamento normal daquele equipamento, reduz falsos alertas e ajuda a detectar desvios de operação.
+
+## Inteligência artificial explicável
+
+A arquitetura prevista combina Isolation Forest para detecção de anomalias, XGBoost para estimar a probabilidade de eventos e SHAP para explicar quais variáveis mais influenciaram cada resultado. Assim, o score pode ser acompanhado por fatores de risco e recomendações em linguagem clara.
+
+## AgroBOT
+
+O assistente contextual consulta os dados da frota e responde perguntas operacionais. Ele compara equipamentos, identifica o maior risco e sugere ações preventivas com base na telemetria disponível.
+
+## Arquitetura do produto
+
+O conceito conecta sensores IoT, telemetria CAN, APIs climáticas e dados históricos a um núcleo digital. Esse núcleo processa o estado da máquina, alimenta os modelos de risco e entrega informações específicas para operador, gestor de frota, subscrição e análise de sinistros.
+
+## Decisões de produto
+
+- Hierarquia visual orientada à criticidade
+- Estados claros para operação normal, atenção e risco alto
+- Navegação consistente entre frota, monitoramento, gêmeo digital e assistente
+- Interfaces densas em dados sem comprometer a leitura
+- Experiência responsiva com modos claro e escuro
+- Explicações de risco legíveis para públicos técnicos e operacionais
+- Trilha de auditoria como parte da evolução planejada
+
+## Em desenvolvimento
+
+O AgroGuard continua em desenvolvimento durante o ciclo da FIAP Next 2026. A evolução prevista inclui refinamento dos modelos, integração com fontes reais de telemetria, validação de métricas e preparação do MVP para apresentação no Challenge Sompo Seguros.

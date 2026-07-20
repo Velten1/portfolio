@@ -38,6 +38,13 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   const { metadata, content } = project
 
   const projectImages: Record<string, string[]> = {
+    'agroguard': [
+      '/images/projects/agroguard/agroguard-landing.jpg',
+      '/images/projects/agroguard/agroguard-overview.jpg',
+      '/images/projects/agroguard/agroguard-monitoring.jpg',
+      '/images/projects/agroguard/agroguard-twin.jpg',
+      '/images/projects/agroguard/agroguard-bot.jpg',
+    ],
     'cintos-fashion': [
       '/images/projects/cintos-fashion/cintos-fashion-home.png',
       '/images/projects/cintos-fashion/cintos-fashion-catalog.png',
@@ -175,4 +182,3 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     </div>
   )
 }
-
