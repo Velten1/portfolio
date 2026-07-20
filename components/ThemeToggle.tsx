@@ -14,22 +14,21 @@ export default function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <div className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 w-9 h-9" />
+      <div className="theme-toggle" />
     )
   }
 
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300"
-      aria-label="Toggle theme"
+      className="theme-toggle"
+      aria-label={theme === 'dark' ? 'Ativar tema claro' : 'Ativar tema escuro'}
     >
       {theme === 'dark' ? (
-        <Sun className="w-5 h-5 text-yellow-500" />
+        <Sun />
       ) : (
-        <Moon className="w-5 h-5 text-slate-700" />
+        <Moon />
       )}
     </button>
   )
 }
-
